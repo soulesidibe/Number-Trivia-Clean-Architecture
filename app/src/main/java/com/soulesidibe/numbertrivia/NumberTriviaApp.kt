@@ -1,9 +1,6 @@
 package com.soulesidibe.numbertrivia
 
 import android.app.Application
-import com.soulesidibe.numbertrivia.data.dataModule
-import com.soulesidibe.numbertrivia.device.datasource.deviceModule
-import com.soulesidibe.numbertrivia.domain.domainModule
 import kotlinx.coroutines.DelicateCoroutinesApi
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -17,7 +14,6 @@ class NumberTriviaApp : Application() {
 
         startKoin {
             androidLogger()
-            modules(deviceModule, dataModule, domainModule)
             androidContext(this@NumberTriviaApp)
         }
 

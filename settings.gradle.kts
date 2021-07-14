@@ -8,6 +8,3 @@ dependencyResolutionManagement {
 }
 rootProject.name = "NumberTriviaClient"
 include(":app")
-include(":domain")
-include(":data")
-include(":device")
