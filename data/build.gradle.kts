@@ -15,4 +15,6 @@ dependencies {
 
     //di
     implementation("io.insert-koin:koin-core:3.1.2")
+    // Koin test features
+    testImplementation("io.insert-koin:koin-test:3.1.2")
 }
