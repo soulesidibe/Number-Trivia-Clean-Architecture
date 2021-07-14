@@ -1,4 +1,4 @@
-package com.soulesidibe.numbertrivia.device.datasource.network
+package com.soulesidibe.numbertrivia.device.network
 
 import android.content.Context
 import android.net.ConnectivityManager

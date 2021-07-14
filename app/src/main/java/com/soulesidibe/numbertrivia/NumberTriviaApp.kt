@@ -2,7 +2,7 @@ package com.soulesidibe.numbertrivia
 
 import android.app.Application
 import com.soulesidibe.numbertrivia.data.dataModule
-import com.soulesidibe.numbertrivia.device.datasource.deviceModule
+import com.soulesidibe.numbertrivia.device.deviceModule
 import com.soulesidibe.numbertrivia.domain.domainModule
 import kotlinx.coroutines.DelicateCoroutinesApi
 import org.koin.android.ext.koin.androidContext

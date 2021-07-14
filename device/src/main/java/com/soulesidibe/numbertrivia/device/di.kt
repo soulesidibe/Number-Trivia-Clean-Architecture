@@ -1,16 +1,15 @@
-package com.soulesidibe.numbertrivia.device.datasource
+package com.soulesidibe.numbertrivia.device
 
 import android.content.Context
 import android.util.Log
-import androidx.datastore.preferences.preferencesDataStore
 import com.soulesidibe.numbertrivia.data.local.datasource.NumberTriviaLocalDataSource
 import com.soulesidibe.numbertrivia.data.network.NetworkInfo
 import com.soulesidibe.numbertrivia.data.remote.datasource.NumberTriviaRemoteDataSource
 import com.soulesidibe.numbertrivia.device.datasource.local.NumberTriviaLocalDataSourceImpl
 import com.soulesidibe.numbertrivia.device.datasource.local.dataStore
-import com.soulesidibe.numbertrivia.device.datasource.network.NetworkInfoImpl
 import com.soulesidibe.numbertrivia.device.datasource.remote.NumberTriviaRemoteDataSourceImpl
 import com.soulesidibe.numbertrivia.device.datasource.remote.api.NumberTriviaServices
+import com.soulesidibe.numbertrivia.device.network.NetworkInfoImpl
 import com.squareup.moshi.Moshi
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -19,7 +18,6 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
-import kotlin.time.measureTime
 
 val deviceModule = module {
     single<Retrofit> {
