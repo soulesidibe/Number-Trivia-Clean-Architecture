@@ -37,7 +37,7 @@ internal class NumberTriviaRepositoryImpl(
             } catch (e: NetworkException) {
                 Result.failure(e)
             } catch (e: CacheDataException) {
-                Result.failure(e)
+                Result.success(e.data.toEntity())
             }
         } else {
             try {

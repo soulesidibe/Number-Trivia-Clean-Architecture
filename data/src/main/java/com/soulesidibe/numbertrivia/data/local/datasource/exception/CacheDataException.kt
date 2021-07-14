@@ -1,3 +1,5 @@
 package com.soulesidibe.numbertrivia.data.local.datasource.exception
 
-class CacheDataException: Exception()
+import com.soulesidibe.numbertrivia.data.model.NumberTriviaModel
+
+data class CacheDataException(val data: NumberTriviaModel): Exception()
