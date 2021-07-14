@@ -2,7 +2,7 @@ package com.soulesidibe.numbertrivia.device.datasource.remote.model
 
 import com.soulesidibe.numbertrivia.data.model.NumberTriviaModel
 
-data class NumberTriviaApiModel(
+internal data class NumberTriviaApiModel(
     val text: String,
     val number: Long,
     val found: Boolean,
