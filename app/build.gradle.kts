@@ -1,7 +1,9 @@
 plugins {
     id("com.android.application")
     id("kotlin-android")
+    id("jacoco")
 }
+apply(from = "${project.rootDir}/tools/script-jacoco.gradle")
 
 android {
     compileSdk = 30

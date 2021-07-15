@@ -1,7 +1,10 @@
 plugins {
     id("java-library")
     id("kotlin")
+    id("jacoco")
 }
+
+apply(from = "${project.rootDir}/tools/script-jacoco.gradle")
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_7
