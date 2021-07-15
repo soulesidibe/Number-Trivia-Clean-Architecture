@@ -12,7 +12,3 @@ internal data class NumberTriviaApiModel(
 internal fun NumberTriviaApiModel.toModel(): NumberTriviaModel {
     return NumberTriviaModel(text, number, found, type)
 }
-
-internal fun NumberTriviaModel.toApiModel(): NumberTriviaApiModel {
-    return NumberTriviaApiModel(text, number, found, type)
-}
