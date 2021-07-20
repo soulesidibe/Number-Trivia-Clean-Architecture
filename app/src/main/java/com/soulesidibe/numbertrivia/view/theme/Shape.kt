@@ -1,4 +1,4 @@
-package com.soulesidibe.numbertrivia.ui.theme
+package com.soulesidibe.numbertrivia.view.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

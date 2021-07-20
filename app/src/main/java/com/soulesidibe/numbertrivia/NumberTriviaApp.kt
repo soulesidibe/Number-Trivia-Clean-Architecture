@@ -17,7 +17,7 @@ class NumberTriviaApp : Application() {
 
         startKoin {
             androidLogger()
-            modules(deviceModule, dataModule, domainModule)
+            modules(appModule, deviceModule, dataModule, domainModule)
             androidContext(this@NumberTriviaApp)
         }
 
