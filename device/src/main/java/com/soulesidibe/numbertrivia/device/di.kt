@@ -6,7 +6,6 @@ import com.soulesidibe.numbertrivia.data.local.datasource.NumberTriviaLocalDataS
 import com.soulesidibe.numbertrivia.data.network.NetworkInfo
 import com.soulesidibe.numbertrivia.data.remote.datasource.NumberTriviaRemoteDataSource
 import com.soulesidibe.numbertrivia.device.datasource.local.NumberTriviaLocalDataSourceImpl
-import com.soulesidibe.numbertrivia.device.datasource.local.dataStore
 import com.soulesidibe.numbertrivia.device.datasource.remote.NumberTriviaRemoteDataSourceImpl
 import com.soulesidibe.numbertrivia.device.datasource.remote.api.NumberTriviaServices
 import com.soulesidibe.numbertrivia.device.network.NetworkInfoImpl

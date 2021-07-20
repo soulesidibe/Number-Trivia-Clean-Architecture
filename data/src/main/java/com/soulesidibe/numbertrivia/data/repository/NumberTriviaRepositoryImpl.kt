@@ -44,6 +44,8 @@ internal class NumberTriviaRepositoryImpl(
                 Result.success(localDataSource.getLastNumberTrivia().toEntity())
             } catch (e: NoCacheFoundException) {
                 Result.failure(e)
+            } catch (e: Exception) {
+                Result.failure(e)
             }
         }
     }
