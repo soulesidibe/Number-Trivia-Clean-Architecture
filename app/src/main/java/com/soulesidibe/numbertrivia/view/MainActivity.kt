@@ -21,16 +21,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        viewModel.numberTriviaLiveData.observe(this, Observer {
-            if (it.isSuccess) {
-                Toast.makeText(this, it.getOrNull()?.description, Toast.LENGTH_LONG).show()
-            } else {
-                Toast.makeText(this, "Failure! ${it.exceptionOrNull()}", Toast.LENGTH_LONG).show()
-            }
-        })
-        viewModel.getConcreteNumberTrivia(1945)
-
+        viewModel.getRandomNumberTrivia()
         setContent {
             val systemUiController = rememberSystemUiController()
             val useDarkIcons = MaterialTheme.colors.isLight
@@ -48,7 +39,7 @@ class MainActivity : ComponentActivity() {
             NumberTriviaClientTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
-                    MainScreen()
+                    MainScreen(viewModel)
                 }
             }
         }

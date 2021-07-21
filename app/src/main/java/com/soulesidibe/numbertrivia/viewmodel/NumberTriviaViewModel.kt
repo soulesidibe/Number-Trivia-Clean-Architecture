@@ -12,14 +12,14 @@ import com.soulesidibe.numbertrivia.model.toUiModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-internal class NumberTriviaViewModel(
+class NumberTriviaViewModel(
     private val getRandomNumberTrivia: GetRandomNumberTrivia,
     private val getNumberTrivia: GetNumberTrivia
 ) : ViewModel() {
 
     private val _numberTriviaLiveData: MutableLiveData<Result<NumberTriviaUiModel>> =
         MutableLiveData()
-    internal val numberTriviaLiveData: LiveData<Result<NumberTriviaUiModel>> = _numberTriviaLiveData
+    val numberTriviaLiveData: LiveData<Result<NumberTriviaUiModel>> = _numberTriviaLiveData
 
     fun getRandomNumberTrivia() {
         viewModelScope.launch {
