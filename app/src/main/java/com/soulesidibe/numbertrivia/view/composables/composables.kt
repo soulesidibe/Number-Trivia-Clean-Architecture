@@ -49,6 +49,7 @@ fun MainScreen(viewModel: NumberTriviaViewModel) {
 @Composable
 fun NumberTriviaSearch(onRandomNumber: () -> Unit, onConcreteNumber: (Long) -> Unit) {
     var text by remember { mutableStateOf("") }
+    val isRandom = text.isEmpty() || text.toLongOrNull() == null
 
     Column(modifier = Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
         OutlinedTextField(
@@ -63,8 +64,19 @@ fun NumberTriviaSearch(onRandomNumber: () -> Unit, onConcreteNumber: (Long) -> U
             singleLine = true,
         )
         Spacer(modifier = Modifier.height(8.dp))
-        OutlinedButton(modifier = Modifier.align(Alignment.End), onClick = {}) {
-            Text(text = "Random")
+        val onClick = {
+            if (isRandom) {
+                onRandomNumber()
+            } else {
+                onConcreteNumber(text.toLong())
+            }
+        }
+        OutlinedButton(modifier = Modifier.align(Alignment.End), onClick = onClick) {
+            if (isRandom) {
+                Text(text = "Get Random")
+            } else {
+                Text(text = "Get Concrete")
+            }
         }
     }
 }
